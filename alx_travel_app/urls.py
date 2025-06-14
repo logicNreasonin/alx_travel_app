@@ -38,7 +38,7 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Include URLs from your listings app (if you create any API endpoints there later)
-    # path('api/listings/', include('listings.urls')), # Example
+    path('api/listings/', include('listings.urls')),
 
     # Swagger URLs
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
